@@ -1,0 +1,13 @@
+[package]
+name = "pagurus-app"
+version = "0.1.0"
+edition.workspace = true
+
+[[bin]]
+name = "pagurus"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+eframe = { version = "0.37", default-features = false, features = ["glow", "default_fonts", "clipboard", "accesskit", "x11", "wayland"] }
+pagurus-core = { path = "../core" }
